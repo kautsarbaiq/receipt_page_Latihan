@@ -1,5 +1,3 @@
-import 'dart:nativewrappers/_internal/vm/lib/ffi_patch.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -13,7 +11,7 @@ class ReceiptPage extends StatelessWidget {
         centerTitle: false,
         leading: Icon(Icons.close, size: 30, color: Color(0xff4db77f)),
         title: Text(
-          'Trasaksi berhasil',
+          'Transaksi berhasil',
           style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
         ),
       ),
@@ -27,13 +25,13 @@ class ReceiptPage extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    'assets/image/succsess.png',
+                    'assets/image/centang.png',
                     width: 80,
                     height: 80,
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Trasaksi Berhasil',
+                    'Transaksi Berhasil',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                   ),
                   SizedBox(height: 5),
@@ -42,7 +40,7 @@ class ReceiptPage extends StatelessWidget {
               ),
             ),
             Divider(
-              thickness: 8,
+              thickness: 3,
               color: const Color.fromARGB(255, 223, 223, 223),
             ),
             Column(
@@ -80,14 +78,14 @@ class ReceiptPage extends StatelessWidget {
                   ),
                 ),
                 Divider(
-                  thickness: 8,
+                  thickness: 3,
                   color: const Color.fromARGB(255, 223, 223, 223),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'pesanan',
+                      'Pesanan',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
@@ -101,7 +99,7 @@ class ReceiptPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'organic tomato',
+                              'Organic tomato',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 12,
@@ -128,7 +126,7 @@ class ReceiptPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'organic broccoli',
+                              'Organic broccoli',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 12,
@@ -148,22 +146,176 @@ class ReceiptPage extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 16),
-                    Divider(color: Colors.grey[200]),
-                    SizedBox(height: 16),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Subtotal',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          'Rp50.000',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 12,
                           ),
                         ),
+                      ],
+                    ),
+                    SizedBox(height: 24),
+                    Text(
+                      'Detail Transaksi',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(height: 16),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
                         Text(
-                          '44.000',
+                          'Jumlah pesanan',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          '3',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Subtotal',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          'Rp50.000',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Pajak',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          'Rp0',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Diskon',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          'Rp5.000',
+                          style: TextStyle(
+                            color: Colors.green,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 8),
+                    Divider(color: Colors.grey[200]),
+                    SizedBox(height: 8),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Total tagihan',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Text(
+                          '44.800',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 8),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Total pembayaran',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Text(
+                          '50.000',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 4),
+                    Divider(color: Colors.grey[200]),
+                    SizedBox(height: 4),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Total kembalian',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Text(
+                          '5.200',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
                           ),
                         ),
                       ],
@@ -174,6 +326,67 @@ class ReceiptPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    side: BorderSide(color: Color(0xff2DBE78)),
+                    foregroundColor: Color(0xff2DBE78),
+                  ),
+                  child: Text(
+                    'Cetak Struk',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
+              SizedBox(width: 16),
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    side: BorderSide(color: Color(0xff2DBE78)),
+                    foregroundColor: Color(0xff2DBE78),
+                  ),
+                  child: Text(
+                    'Kirim Struk',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 8), // Add spacing between buttons
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: SizedBox(
+              width: double.infinity, // Make button full width
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  backgroundColor: Color(0xff2DBE78),
+                  foregroundColor: Colors.white,
+                ),
+                child: Text('Transaksi Baru'),
+              ),
+            ),
+          ),
+          SizedBox(height: 16), // Add bottom padding
+        ],
       ),
     );
   }
